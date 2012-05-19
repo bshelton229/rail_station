@@ -12,6 +12,11 @@ module RailStation
       []
     end
 
+    # Bootstrap icon helper
+    def icon(style)
+      raw "<i class='icon-#{style}'></i>"
+    end
+
     # Admin menu helper
     def rail_station_menu_list(items, ul_class='nav', active_class='active')
       list_items = Array.new
