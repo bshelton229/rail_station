@@ -1,0 +1,24 @@
+!!!
+%hml
+  %head
+    %title= @page_title || 'Rail Station'
+
+    = stylesheet_link_tag 'rail_station', :media => 'all'
+    = javascript_include_tag 'rail_station'
+
+    %meta{ :name => 'viewport', :content => 'initial-scale = 1.0,maximum-scale = 1.0' }
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{ "data-toggle" => "collapse", "data-target" => '.nav-collapse'}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          =link_to 'Rail Station', '#', :class => 'brand'
+
+    .container
+      .row
+        .span12
+          = yield
