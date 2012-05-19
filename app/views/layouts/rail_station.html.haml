@@ -19,7 +19,7 @@
           =link_to 'Rail Station', '#', :class => 'brand'
           - if current_user
             .nav-collapse
-              =rail_station_admin_menu
+              =rail_station_menu_list rail_station_admin_menu
             %p.navbar-text.pull-right= render 'rail_station/navbar_user'
     .container
       .row

@@ -27,7 +27,7 @@ module RailStation
 
     # Rail Station admin menu array of hashes
     def rail_station_admin_menu
-      rail_station_menu_list [
+      [
         {
           :title => 'Root',
           :link => '/',
