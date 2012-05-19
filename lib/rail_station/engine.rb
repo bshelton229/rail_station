@@ -5,7 +5,7 @@ module RailStation
       # Load view helpers
       ActionView::Base.send :include, ViewHelpers
       # Make sure we precompile the uw_admin assets
-      # app.config.assets.precompile += %w(uw_admin.js uw_admin.css tinymce.js) + UwAdmin::Rails.tinymce_assets
+      app.config.assets.precompile += %w(rail_station.css rail_station.js)
     end
   end
 end
