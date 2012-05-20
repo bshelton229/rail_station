@@ -17,6 +17,13 @@ module RailStation
       raw "<i class='icon-#{style}'></i>"
     end
 
+    # Render the brand title
+    # Try to read the config variables for title, or default
+    def rail_station_brand
+      c = Config
+      link_to (c.title || 'Rail Station'), ( c.title_link && respond_to?(c.title_link) ) ? send(c.title_link) : '#', :class => 'brand'
+    end
+
     # Admin menu helper
     def rail_station_menu_list(items, ul_class='nav', active_class='active')
       list_items = Array.new
