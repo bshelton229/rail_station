@@ -28,7 +28,7 @@ module RailStation
     def rail_station_menu_list(items, ul_class='nav', active_class='active')
       list_items = Array.new
       items.each do |item|
-        active = params[:active] ? true : false
+        active = item[:active] ? true : false
         link = link_to(item[:title], item[:link])
         open_tag = active ? "<li class=\"#{active_class}\">" : '<li>'
         close_tag = '</li>'
